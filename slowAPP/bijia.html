@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/bijia.css">
+  <script src="lib/flexible.js"></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="hd__log">
+      <a href="index.html">
+        <img src="images/header_logo.png" alt="">
+      </a>
+    </div>
+    <h1 class="title"></h1>
+    <div class="hd_load">
+      <a href="javascript:;">
+        <img src="images/header_app.png" alt="">
+      </a>
+    </div>
+  </header>
+
+  <!-- main 主体 -->
+  <section class="search">
+    <div class="ipt">
+      <input type="search" placeholder="请输入你想要的商品">
+    </div>
+    <a href="javascript:;" class="search_btn">搜索</a>
+  </section>
+
+  <!-- 商品列表 面包屑导航-->
+  <section class="mm_product">
+    <nav class="pro_nav clearfix">
+      <a href="index.html" class="list_tlt1">首页></a>
+      <a href="productlist.html?categoryid=0&category=电视&pageid=1" class="list-title3" data-id="category">电视></a>
+      <a href="#" class="list_tlt2">乐视TV</a>
+      <a href="#" class="select">筛选</a>
+    </nav>
+
+    <!-- 图文展示 -->
+    <div class="bj_show">
+
+      <!-- template 模板渲染 -->
+
+      <!-- <p class="bj_-tlt ft_36 al_center">创维(Skyworth) 50M5 50英寸 超高清 智能网络LED液晶电视</p>
+      <div class="bj_img">
+        <img src="images/bj01.g.jpg" alt="">
+      </div>
+      <div class="bj_collect">
+        <img src="images/sc.jpg" alt="">
+      </div> -->
+    </div>
+    <div class="price">
+
+    </div>
+    <!-- 比价导航 -->
+    <div class="bj_nav ft_28">
+      <div class="nav_tlt now">比价购买</div>
+      <div class="nav_tlt">产品参数</div>
+      <div class="nav_tlt">评价(2322)</div>
+    </div>
+
+    <!-- 去购买 -->
+    <div class="bj_go">
+
+      <script type="text/html" id="shop">
+        {{ each result v i }}
+        {{#v.bjShop}}
+        {{/each}}
+      </script>
+
+      <!-- <div class="content">
+        <div class="go_left">
+          <img src="images/slogo.png" alt="">
+          <span>京东</span>
+        </div>
+        <div class="go_right">
+          <span class="money cl_red">&yen;999</span>
+          <a href="#" class="shopping ft_24">去购买</a>
+        </div> -->
+      </div>
+
+      <!-- 提示 -->
+      <div class="tips txt-cut">
+        * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+      </div>
+    </div>
+    <div class="estimate">
+      <div class="estimate_tlt">网友评价</div>
+      <div class="estimate_main">
+        <ul class="estimate_content">
+          <!-- template 模板渲染评价板块 -->
+          <!-- <li>
+            <div class="user">
+              <span class="username">西小明</span>
+              <span class="time">2012</span>
+            </div>
+            <p class="from">购买自：京东商城</p>
+            <p class="content">电视还没送到实物比图片更好看，电视还没送到</p>
+          </li> -->
+        </ul>
+        <div class="checkmore">
+          <a href="#">查看更多评价</a>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="foot_tlt">
+      <a href="#" class="login">登录</a>
+      <a href="#" class="register">注册</a>
+      <a href="#" class="go-top">
+        <img src="images/top.jpg" alt=""> 返回顶部
+      </a>
+    </div>
+    <div class="foot_bt ft_24">
+      <p class="foot_txt">
+        <a href="javascript:;" class="ft_cl">手机APP下载</a>
+        <a href="index.html">慢慢买手机版</a>
+        <a href="javascript:;"> -- 掌上比价平台</a>
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+
+  <!-- 准备模板 -->
+  <script type="text/html" id="showTpl">
+    {{ each result v i }}
+    <p class="bj_-tlt ft_36 al_center">{{ v.productName }}</p>
+    <div class="bj_img">
+      <img src="{{ v.productImg }}" alt="">
+    </div>
+    <div class="bj_collect">
+      <img src="images/sc.jpg" alt="">
+    </div>
+    {{ /each }}
+  </script>
+
+  <!-- 商品评价 -->
+  <script type="text/html" id="contentTpl">
+    {{ each result v i }}
+    <li data-comid= "{{ v.comId }}">
+      <div class="user">
+        <span class="username">{{ v.comName }}</span>
+        <span class="time">{{ v.comTime }}</span>
+      </div>
+      <p class="from">{{ v.comFrom }}</p>
+      <p class="content">{{ v.comContent }}</p>
+    </li>
+    {{ /each }}
+  </script>
+  <!-- js引入 -->
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/bijia.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/inlanddiscount.css">
+  <script src="lib/flexible.js"></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="hd__log">
+      <a href="javascript:history.go(-1)">
+        <div class="arrowleft"></div>
+      </a>
+    </div>
+    <h1 class="title"> 国内折扣</h1>
+    <div class="hd_load">
+      <a href="javascript:;">
+      </a>
+    </div>
+  </header>
+
+  <section class="mm_wrap">
+    <!-- 商品列表 -->
+    <ul class="wrap">
+
+      <script type="text/html" id="pro">
+        {{each result v i }}
+        <li class="pro">
+        <a href="discount.html?productid={{v.productId}}">
+          <div class="img">
+            {{#v.productImg}}
+            <!-- <img src="images/product.jpg" alt=""> -->
+          </div>
+          <div class="info">
+            <p class="desc txt-cut">{{v.productName}}</p>
+            <div class="price">{{v.productPrice}}</div>
+            <div class="from">{{v.productFrom}} | {{v.productTime}}</div>
+          </div>
+        </a>
+      </li>
+      {{ /each }}
+      </script>
+      <!-- <li class="pro">
+        <a href="discount.html?productid=1">
+          <div class="img">
+            <img src="images/product.jpg" alt="">
+          </div>
+          <div class="info">
+            <p class="desc txt-cut">西域美农新疆特产五星和田红枣250g*2</p>
+            <div class="price">10元9</div>
+            <div class="from">天猫商城 | 10-25 13:57</div>
+          </div>
+        </a>
+      </li> -->
+    </ul>
+  </section>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="foot_tlt">
+      <a href="#" class="login">登录</a>
+      <a href="#" class="register">注册</a>
+      <a href="#" class="go-top">
+        <img src="images/top.jpg" alt=""> 返回顶部
+      </a>
+    </div>
+    <div class="foot_bt ft_24">
+      <p class="foot_txt">
+        <a href="javascript:;" class="ft_cl">手机APP下载</a>
+        <a href="index.html">慢慢买手机版</a>
+        <a href="javascript:;"> -- 掌上比价平台</a>
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+
+  <!-- js引入 -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/inlanddiscount.js"></script>
+</body>
+
+</html>

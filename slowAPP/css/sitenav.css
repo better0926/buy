@@ -1,0 +1,27 @@
+.mm_sitnav {
+  padding: 20px 0;
+  background-color: #fff;
+}
+.mm_sitnav .wrap {
+  margin: 0 auto;
+  width: 7.333333rem /* 550/75 */;
+  display: flex;
+  flex-wrap: wrap;
+}
+.mm_sitnav .wrap a {
+  margin-right: 0.133333rem /* 10/75 */;
+  margin-bottom: 0.133333rem /* 10/75 */;
+  padding: 0 0.266667rem /* 20/75 */;
+  height: 1.12rem /* 84/75 */;
+  line-height: 1.12rem /* 84/75 */;
+  display: flex;
+  align-items: center;
+  font-size: 0.426667rem /* 32/75 */;
+  border: 1px solid #c2c2c2;
+  background-color: #f4f4f4;
+}
+.mm_sitnav .img {
+  margin-right: 0.213333rem /* 16/75 */;
+  width: 0.426667rem /* 32/75 */;
+  height: 0.426667rem /* 32/75 */;
+}

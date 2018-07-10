@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/productlist.css">
+  <script src="lib/flexible.js"></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="hd__log">
+      <a href="index.html">
+        <img src="images/header_logo.png" alt="">
+      </a>
+    </div>
+    <h1 class="title"></h1>
+    <div class="hd_load">
+      <a href="javascript:;">
+        <img src="images/header_app.png" alt="">
+      </a>
+    </div>
+  </header>
+
+  <!-- main 主体 -->
+  <section class="search">
+    <div class="ipt">
+      <input type="search" placeholder="请输入你想要的商品">
+    </div>
+    <a href="javascript:;" class="search_btn">搜索</a>
+  </section>
+
+  <!-- 商品列表 面包屑导航-->
+  <section class="mm_product">
+    <nav class="pro_nav clearfix">
+      <!-- <a href="index.html" class="list_tlt1">首页></a>
+      <a href="category.html" class="list_tlt2">全部分类></a>
+      <a href="#" class="list-title3" data-id="category">电视></a>
+      <a href="#" class="select">筛选</a> -->
+    </nav>
+    <div class="pro_wrap">
+      <!-- artTemplate 渲染 -->
+    <!--   <a href="#" class="sub_wrap">
+        <div class="pro">
+          <div class="pro_left">
+            <img src="images/product.jpg" alt="">
+          </div>
+          <div class="pro_right">
+            <p class="txt-cut-2">双11预售双11预售双11预售双11预售双11预售双11预售双11预售</p>
+            <p class="price ft_cl">109元</p>
+            <div class="time">
+              <span>报价(6)</span>
+              <span class="num">评论(2286)</span>
+            </div>
+          </div>
+        </div>
+      </a> -->
+
+      <!-- 分页 -->
+     
+    </div>
+    <div class="page">
+      <p>
+        <a href="javascript:;" class="page-change" data-pageType="prev">上一页</a>
+      </p>
+      <p>
+        <a href="javascript:;" class="pagebox">
+          <select id="selectPage" name="select" class="selectPage">
+          </select>
+        </a>
+      </p>
+      <p>
+        <a href="javascript:;" class="page-change" data-pageType="next">下一页</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="foot_tlt">
+      <a href="#" class="login">登录</a>
+      <a href="#" class="register">注册</a>
+      <a href="#" class="go-top">
+        <img src="images/top.jpg" alt=""> 返回顶部
+      </a>
+    </div>
+    <div class="foot_bt ft_24">
+      <p class="foot_txt">
+        <a href="javascript:;" class="ft_cl">手机APP下载</a>
+        <a href="index.html">慢慢买手机版</a>
+        <a href="javascript:;"> -- 掌上比价平台</a>
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+
+  <!-- 准备模板 -->
+  <!-- 面包屑导航 -->
+  <script type="text/html" id="proNavTpl">
+    {{ each result v i }}
+    <a href="index.html" class="list_tlt1">首页></a>
+    <a href="category.html" class="list_tlt2">全部分类></a>
+    <a href="#" class="list-title3" data-id="category">{{ v.category }}></a>
+    <a href="#" class="select">筛选</a>
+    {{ /each }}
+  </script>
+
+  <!-- 商品列表页 -->
+  <script type="text/html" id="proWrapTpl">
+
+    {{ each result v i }}
+    <a href="bijia.html?productId={{ v.productId }}" class="sub_wrap">
+        <div class="pro">
+          <div class="pro_left">
+            <img src="{{ v.productImg }}" alt="">
+          </div>
+          <div class="pro_right">
+            <p class="txt-cut-2">{{ v.productName }}</p>
+            <p class="price ft_cl">{{ v.productPrice }}</p>
+            <div class="time">
+              <span>{{ v.productQuote }}</span>
+              <span class="num">{{ v.productCom }}</span>
+            </div>
+          </div>
+        </div>
+      </a>
+    {{ /each }}
+  </script>
+
+
+
+  <!-- js引入 -->
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/productlist.js"></script>
+</body>
+
+</html>

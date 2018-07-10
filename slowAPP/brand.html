@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/productlist.css">
+  <link rel="stylesheet" href="css/brand.css">
+  <script src="lib/flexible.js"></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="hd__log">
+      <a href="index.html">
+        <img src="images/header_logo.png" alt="">
+      </a>
+    </div>
+    <h1 class="title"></h1>
+    <div class="hd_load">
+      <a href="javascript:;">
+        <img src="images/header_app.png" alt="">
+      </a>
+    </div>
+  </header>
+
+  <!-- main 主体  搜索框-->
+  <section class="search">
+    <div class="ipt">
+      <input type="search" placeholder="请输入你想要比价的商品">
+    </div>
+    <a href="javascript:;" class="search_btn">搜索</a>
+  </section>
+
+  <!-- 面包屑导航 -->
+  <nav class="pro_nav clearfix">
+    <a href="index.html" class="list_tlt1">首页></a>
+    <a href="category.html" class="list_tlt2">全部分类></a>
+  </nav>
+
+  <!-- 电视品牌排行 -->
+  <section class="mm_brand mm_product">
+    <!-- 品牌推荐 -->
+    <div class="bd_tlt">
+      <h4 class="good">平板电视哪个牌子好</h4>
+    </div>
+    <div class="brand">
+      <ul class="bd_list">
+
+        <!-- template 模板渲染 -->
+        <script type="text/html" id="good">
+          {{ each result v i }}
+          <li class="list" data-brandid="{{v.brandId}}" data-brandtitleid="{{v.brandTitleId}}">
+            <a href="productlist.html?categoryid={{v.categoryId}}&pageid=1" class="jump">
+              <div class="bd_left cl{{i+1}}">{{i+1}}</div>
+              <div class="bd_middle">
+                <p class="tlt">{{v.brandName}}</p>
+                <p class="desc">{{v.brandInfo}}</p>
+              </div>
+              <div class="right arrowdown"></div>
+            </a>
+          </li>
+          {{ /each }}
+        </script>
+        <!-- <li class="list">
+          <a href="productlist.html?categoryid=10&pageid=1" class="jump">
+            <div class="bd_left red">9</div>
+            <div class="bd_middle">
+              <p class="tlt">三星液晶电视</p>
+              <p class="desc">30天全网销售：242408件</p>
+            </div>
+            <div class="right arrowdown">
+
+            </div>
+          </a>
+        </li> -->
+      </ul>
+    </div>
+    <!-- 平板电视产品销量排行 -->
+    <div class="bd_tlt">
+      <h4 class="good">平板电视产品销量排行</h4>
+    </div>
+
+    <!-- 平板电视销量 -->
+    <div class="sell">
+      <!-- tempalte 渲染 -->
+      <script type="text/html" id="sellTpl">
+        {{each result v i }}
+        <a href="bijia.html?productid={{v.productId}}&categoryid={{v.categoryId}}&brandid={{v.brandId}}&brandTitleid={{v.brandTitleId}}"
+          class="sub_wrap" data-productid="{{v.productId}}">
+          <div class="pro">
+            <div class="pro_left">
+              {{#v.productImg}}
+            </div>
+            <div class="pro_right">
+              <p class="txt-cut-2">{{v.productName}}</p>
+              <p class="price ft_cl">{{v.productPrice}}</p>
+              <div class="time">
+                <span>{{v.productQuote}}</span>
+                <span class="num">{{v.productCom}}</span>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        {{ /each }}
+      </script>
+    </div>
+
+    <!-- 平板电视最新评论 -->
+    <div class="bd_tlt">
+      <h4 class="good">平板电视最新评论</h4>
+    </div>
+
+    <div class="com">
+      <script type="text/html" id="dis">
+
+      {{each result v i}}
+      <a href="#" class="sub_wrap">
+        <div class="pro">
+          <div class="pro_left">
+            {{#v.productImg}}
+            <!-- <img src="images/product.jpg" alt=""> -->
+          </div>
+          <div class="pro_right">
+            <p class="txt-cut-2">{{v.productName}}</p>
+          </div>
+        </div>
+        <div class="dis">
+          <div class="user clearfix">
+            <p class="name">{{v.comName}}</p>
+            <span class="time">{{v.comTime}}</span>
+          </div>
+          <div class="txt">{{v.comContent}}</div>
+        </div>
+      </a>
+      {{ /each}}
+    </script>
+      <!-- <a href="#" class="sub_wrap">
+        <div class="pro diss">
+          <div class="pro_left">
+            <img src="images/product.jpg" alt="">
+          </div>
+          <div class="pro_right">
+            <p class="txt-cut-2">双11预售双11预售双11预售双11预售双11预售双11预售双11预售</p>
+          </div>
+        </div>
+        
+        <div class="dis">
+          <div class="user clearfix">
+            <p class="name">假按揭啊</p>
+            <span class="time">1919</span>
+          </div>
+          <div class="txt">
+            立刻就来看看了解
+          </div>
+        </div>
+      </a> -->
+    </div>
+
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="foot_tlt">
+      <a href="#" class="login">登录</a>
+      <a href="#" class="register">注册</a>
+      <a href="#" class="go-top">
+        <img src="images/top.jpg" alt=""> 返回顶部
+      </a>
+    </div>
+    <div class="foot_bt ft_24">
+      <p class="foot_txt">
+        <a href="javascript:;" class="ft_cl">手机APP下载</a>
+        <a href="index.html">慢慢买手机版</a>
+        <a href="javascript:;"> -- 掌上比价平台</a>
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+
+
+
+  <!-- js引入 -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/brand.js"></script>
+</body>
+
+</html>

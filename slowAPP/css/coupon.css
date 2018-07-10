@@ -1,0 +1,31 @@
+.mm_coupon {
+  background-color: #fff;
+}
+.coupon_list {
+  padding: 0.4rem /* 30/75 */ 0.133333rem /* 10/75 */;
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  flex-wrap: wrap;
+}
+.coupon_list .list {
+  width: 3.146667rem /* 236/75 */;
+  height: 2rem /* 150/75 */;
+  margin-bottom: 0.133333rem /* 10/75 */;
+}
+.coupon_list :nth-of-type(3n-1) {
+  margin: 0 0.133333rem /* 10/75 */;
+}
+.coupon_list a {
+  border: 1px solid #ccc;
+  height: 100%;
+  text-align: center;
+}
+.coupon_list a .title {
+  font-size: 0.32rem /* 24/75 */;
+}
+.coupon_list .img {
+  margin: 0.066667rem /* 5/75 */ auto;
+  width: 1.333333rem /* 100/75 */;
+  height: 1.333333rem /* 100/75 */;
+}

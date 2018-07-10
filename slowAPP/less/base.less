@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+//字体大小
+.ft_18 {
+  font-size: .24rem /* 18/75 */;
+}
+.ft_20 {
+  font-size: .266667rem /* 20/75 */;
+}
+.ft_24 {
+  font-size: .32rem /* 24/75 */;
+}
+.ft_26 {
+  font-size: .346667rem /* 26/75 */;
+}
+.ft_28 {
+  font-size: .373333rem /* 28/75 */;
+}
+.ft_30 {
+  font-size: .4rem /* 30/75 */;
+}
+.ft_36 {
+  font-size: .48rem /* 36/75 */;
+}
+
+body {
+  font-size: 14px;
+  font-family: 'Microsoft YaHei', sans-serif;
+  background-color: #f5f5f5;
+}
+a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+input[type="text"],
+input[type="search"],
+textarea {
+  border: none;
+  outline: none;
+  resize: none;
+  -webkit-appearance: none;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  line-height: 0;
+  clear: both;
+}
+
+// 单行文字溢出省略显示
+
+.txt-over {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+img {
+  display: block;
+  // width: 100%;
+}
+
+//多行溢出省略
+.txt-cut {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.txt-cut-3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.txt-cut-4{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+// 字体大小
+.fz_12 {
+  font-size: 12px;
+}
+.fz_14 {
+  font-size: 14px;
+}
+// 颜色
+.ft_cl {
+  color: red;
+}

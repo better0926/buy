@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/baicaijia.css">
+  <script src="lib/flexible.js"></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header hd_red">
+    <div class="hd__log">
+      <a href="javascript:history.go(-1)">
+        <div class="arrowleft"></div>
+      </a>
+    </div>
+    <h1 class="title">白菜价-淘宝内部券</h1>
+    <div class="hd_load">
+      <a href="javascript:;">
+        <img src="images/header_app.png" alt="">
+      </a>
+    </div>
+  </header>
+
+  <section class="mm_nav">
+    <ul class="wrap_nav clearfix">
+      <!-- <li class="nav now">
+        <a href="baicaijia.html?titleid=2">全部全部全部全部全部</a>
+      </li> -->
+    </ul>
+  </section>
+
+  <!-- 商品列表 -->
+  <section class="mm_product">
+    <div class="pro_wrap">
+      <!-- artTemplate 渲染 -->
+      <!-- <div class="pro">
+        <a href="#" class="pro_left">
+          <img src="images/product.jpg" alt="">
+        </a>
+        <div href="#" class="pro_right">
+          <a href="#" class="txt-cut-2">双11预售双11预售双11预售双11预售双11预售双11预售双11预售
+          </a>
+          <a href="#" class="timer">
+            <span>券后
+              <em class="yen">106</em>
+            </span>
+            <span class="num">&yen;444</span>
+          </a>
+          <a href="" class="count">
+            <div class="outer">
+              <div class="inner"></div>
+            </div>
+            <p class="goes">已领1111张</p>
+          </a>
+          <div class="get">
+            <a href="#" class="gift">点击领券</a>
+            <a href="#" class="order">下单地址</a>
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="foot_tlt">
+      <a href="#" class="login">登录</a>
+      <a href="#" class="register">注册</a>
+      <a href="#" class="go-top">
+        <img src="images/top.jpg" alt=""> 返回顶部
+      </a>
+    </div>
+    <div class="foot_bt ft_24">
+      <p class="foot_txt">
+        <a href="javascript:;" class="ft_cl">手机APP下载</a>
+        <a href="index.html">慢慢买手机版</a>
+        <a href="javascript:;"> -- 掌上比价平台</a>
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+
+  <script type="text/html" id="navTpl">
+    {{each result v i }}
+    <li class="nav">
+      <a href="baicaijia.html?titleid={{v.titleId}}">{{v.title}}</a>
+    </li>
+    {{ /each }}
+  </script>
+
+  <!-- 商品列表 模板 -->
+  <script type="text/html" id="proTpl">
+    {{each result v i}}
+    <div class="pro" data-id="{{v.productId}}">
+      <a href="#" class="pro_left">
+        {{#v.productImg}}
+        <!-- <img src="images/product.jpg" alt=""> -->
+      </a>
+      <div href="#" class="pro_right">
+        <a href="#" class="txt-cut-2">{{#v.productName}}</a>
+        <a href="#" class="timer">
+          <span>券后{{#v.productPrice}}
+        </a>
+         {{#v.productCouponRemain}}
+        <a href="" class="count">
+         
+        </a>
+        <div class="get">
+          {{#v.productCoupon}}
+          {{#v.productHref}}
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </script>
+  <!-- js引入 -->
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/iscroll.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/baicaijia.js"></script>
+</body>
+
+</html>

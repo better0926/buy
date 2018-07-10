@@ -1,0 +1,83 @@
+.mm_main {
+  background-color: #fff;
+}
+.container {
+  padding: 0 0.266667rem /* 20/75 */;
+}
+.info .info_tlt {
+  padding-top: 0.266667rem /* 20/75 */;
+  font-size: 0.506667rem /* 38/75 */;
+  line-height: 0.613333rem /* 46/75 */;
+}
+.info .new_price {
+  margin-top: 0.133333rem /* 10/75 */;
+  font-size: 0.373333rem /* 28/75 */;
+  color: #ff841d;
+}
+.info .info_mesg span {
+  display: inline-block;
+  font-size: 0.32rem /* 24/75 */;
+  line-height: 1.066667rem /* 80/75 */;
+  color: #a19cbd;
+}
+.info .time {
+  margin: 0 0.186667rem /* 14/75 */;
+}
+.info .pic {
+  width: 3.333333rem /* 250/75 */;
+  height: 3.333333rem /* 250/75 */;
+  float: right;
+}
+.info .big_pic {
+  margin: 0 auto;
+  width: 6.213333rem /* 466/75 */;
+  height: 7.2rem /* 540/75 */;
+}
+.info .text {
+  font-size: 0.4rem /* 30/75 */;
+  line-height: 0.666667rem /* 50/75 */;
+}
+.info .text .text_p {
+  margin-bottom: 0.133333rem /* 10/75 */;
+}
+.city #disstorck {
+  padding: 0 0.293333rem /* 22/75 */ 0.133333rem /* 10/75 */;
+  border: 1px solid #efefef;
+  box-shadow: 3px 3px 5px #f0f0f0;
+  width: 3.6rem /* 270/75 */;
+  margin: 0 auto;
+}
+.city li {
+  height: 0.533333rem /* 40/75 */;
+  border-bottom: 2px dotted #d6d6d6;
+}
+.city li a {
+  display: block;
+  height: 100%;
+}
+.city li span {
+  width: 100%;
+  display: block;
+  height: 0.533333rem /* 40/75 */;
+  line-height: 0.533333rem /* 40/75 */;
+  padding-left: 0.133333rem /* 10/75 */;
+  font-size: 0.293333rem /* 22/75 */;
+}
+.city li span strong {
+  width: 1.2rem /* 90/75 */;
+  float: right;
+  text-align: center;
+  color: #f27b04;
+  font-weight: normal;
+}
+.go_shop {
+  margin: 0.48rem /* 36/75 */ 0 0.933333rem /* 70/75 */;
+  height: 0.8rem /* 60/75 */;
+  background-color: #f27b04;
+  display: block;
+  text-align: center;
+  line-height: 0.8rem /* 60/75 */;
+  color: #fff;
+  border-radius: 0.133333rem /* 10/75 */;
+  font-size: 0.346667rem /* 26/75 */;
+}

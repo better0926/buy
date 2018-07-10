@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/couponproduct.css">
+  <script src="lib/flexible.js"></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header hd_red">
+    <div class="hd__log">
+      <a href="javascript:history.go(-1)">
+        <div class="arrowleft"></div>
+      </a>
+    </div>
+    <h1 class="title">肯德基优惠券</h1>
+    <div class="hd_load">
+      <a href="javascript:;">
+        <img src="images/header_app.png" alt="">
+      </a>
+    </div>
+  </header>
+
+  <!-- 优惠券-->
+  <section class="mm_coupon">
+    <div class="tips"> --点餐前出示手机中的优惠券，即可享受优惠--</div>
+    <ul class="coupon_list">
+      <!-- <li href="#" class="sub_wrap">
+        <a href="#" class="pro">
+          <div class="pro_left">
+            <img src="images/product.jpg" alt="">
+          </div>
+          <div class="pro_right">
+            <p class="txt-cut-4">双11预售双11预售双11预售双11预售双11预售双11预售双11预售</p>
+            <p class="price ft_cl">109元</p>
+            <div class="date">
+              <span>报价(6)</span>
+            </div>
+          </div>
+        </a>
+      </li> -->
+      <script type="text/html" id="couproTpl">
+        {{each result v i }}
+        <li href="#" class="sub_wrap">
+        <a href="#" class="pro">
+          <div class="pro_left">
+            {{#v.couponProductImg}}
+          </div>
+          <div class="pro_right">
+            <p class="txt-cut-4">{{v.couponProductName}}</p>
+            <p class="price ft_cl">{{v.couponProductPrice}}</p>
+            <div class="date">
+              <span>{{v.couponProductTime}}</span>
+            </div>
+          </div>
+        </a>
+      </li>
+      {{ /each }}
+      </script>
+    </ul>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="foot_tlt">
+      <a href="#" class="login">登录</a>
+      <a href="#" class="register">注册</a>
+      <a href="#" class="go-top">
+        <img src="images/top.jpg" alt=""> 返回顶部
+      </a>
+    </div>
+    <div class="foot_bt ft_24">
+      <p class="foot_txt">
+        <a href="javascript:;" class="ft_cl">手机APP下载</a>
+        <a href="index.html">慢慢买手机版</a>
+        <a href="javascript:;"> -- 掌上比价平台</a>
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+
+  <!-- js引入 -->
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/iscroll.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/couponproduct.js"></script>
+</body>
+
+</html>

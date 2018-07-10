@@ -1,0 +1,115 @@
+.mm_product {
+  background-color: #f5f5f5;
+}
+.mm_nav {
+  margin-bottom: 0.133333rem /* 10/75 */;
+  height: 1.066667rem /* 80/75 */;
+  line-height: 0.96rem /* 72/75 */;
+  background-color: #fff;
+  overflow: hidden;
+}
+.mm_nav .wrap_nav {
+  height: 100%;
+}
+.mm_nav .nav {
+  float: left;
+  padding: 0.026667rem /* 2/75 */ 0;
+  border-bottom: 2px solid #fc353a;
+  border-color: transparent;
+}
+.mm_nav .nav.now a {
+  border-bottom: 2px solid #fc353a;
+}
+.mm_nav .nav a {
+  margin: 0 0.266667rem /* 20/75 */;
+  font-size: 0.32rem /* 24/75 */;
+}
+.mm_product .pro {
+  margin-bottom: 0.133333rem /* 10/75 */;
+  height: 3.866667rem /* 290/75 */;
+  background-color: #fff;
+}
+.pro_right {
+  padding-left: 0.133333rem /* 10/75 */;
+  padding-top: 0.2rem /* 15/75 */;
+  font-size: 0.346667rem /* 26/75 */;
+}
+.pro_right .timer {
+  padding-top: 0.266667rem /* 20/75 */;
+  color: red;
+  font-size: 0.4rem /* 30/75 */;
+}
+.pro_right .timer span {
+  font-size: 0.453333rem /* 34/75 */;
+}
+.pro_right .timer span em {
+  font-style: normal;
+  padding: 0 0.133333rem /* 10/75 */;
+  font-size: 0.32rem /* 24/75 */;
+}
+.pro_right .timer del {
+  margin-left: 0.346667rem /* 26/75 */;
+  color: #ccc;
+}
+.pro_right .bar {
+  display: flex;
+  height: 0.666667rem /* 50/75 */;
+  align-items: center;
+  color: #fc353a;
+}
+.pro_right .bar b {
+  font-weight: normal;
+  font-size: 0.32rem /* 24/75 */;
+}
+.pro_right .bar i {
+  position: relative;
+  margin-right: 0.266667rem /* 20/75 */;
+  width: 2.186667rem /* 164/75 */;
+  height: 0.373333rem /* 28/75 */;
+  border: 1px solid #fc353a;
+  background-color: #ffb7b7;
+  border-radius: 0.186667rem /* 14/75 */;
+  overflow: hidden;
+}
+.pro_right .bar i em {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #fc353a;
+  border-radius: 0.186667rem /* 14/75 */;
+  color: #fff;
+}
+.pro_right .bar i span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 0.533333rem /* 40/75 */;
+  font-size: 0.24rem /* 18/75 */;
+}
+.pro_right .get {
+  display: flex;
+  justify-content: space-between;
+  height: 0.693333rem /* 52/75 */;
+  line-height: 0.693333rem /* 52/75 */;
+}
+.pro_right .get a {
+  height: 100%;
+  padding: 0 0.133333rem /* 10/75 */;
+  text-align: center;
+  font-size: 0.32rem /* 24/75 */;
+}
+.pro_right .get :first-child {
+  border: 1px dotted #fc353a;
+  color: #fc353a;
+}
+.pro_right .get :last-child {
+  border: 1px solid #ff4140;
+  background-color: #fc353a;
+  color: #fff;
+  border-radius: 0.133333rem /* 10/75 */;
+}

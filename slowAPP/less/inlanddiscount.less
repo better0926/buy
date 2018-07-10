@@ -1,0 +1,42 @@
+//国内折扣
+.mm_wrap {
+  padding: .133333rem /* 10/75 */ 0;
+}
+.wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  flex-wrap: wrap;
+  background-color: #fff;
+  .pro {
+    padding: .2rem /* 15/75 */;
+    width: 50%;
+
+    height: 6.933333rem /* 520/75 */;
+    border-bottom: 1px solid #ccc;
+    .img {
+      margin: 0 auto;
+      width: 4.266667rem /* 320/75 */;
+      height: 4.266667rem /* 320/75 */;
+    }
+    .info {
+      margin-top: .133333rem /* 10/75 */;
+      padding-left: .133333rem /* 10/75 */;
+      font-size: .333333rem /* 25/75 */;
+      .desc {
+        line-height: .506667rem /* 38/75 */;
+      }
+      .price {
+        line-height: .666667rem /* 50/75 */;
+        color: #ff5b4c;
+      }
+      .from {
+        color: #666;
+
+      }
+    }
+  }
+  .pro:nth-child(odd){
+    border-right: 1px solid #ccc;
+  }
+}

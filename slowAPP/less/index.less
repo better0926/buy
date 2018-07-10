@@ -1,0 +1,68 @@
+@charset "utf-8";
+@bg_cl: #ff841d;
+@bg_ff:#fff;
+img {
+  width: 100%;
+}
+
+//首页导航
+.mm_nav {
+  margin-top: .266667rem /* 20/75 */;
+  background-color: #fff;
+  font-size: .32rem /* 24/75 */;
+  text-align: center;
+  .nav {
+    padding-top: .4rem /* 30/75 */;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-content: center;
+    .nav_list {
+      padding: .133333rem /* 10/75 */ 0; 
+      width: 25%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &.hide {
+        display: none;
+      }  
+    }
+    .nav_img {
+      margin-bottom: .133333rem /* 10/75 */;
+      width: 1.333333rem /* 100/75 */;
+      height: 1.333333rem /* 100/75 */;
+    }
+  }
+  p {
+    line-height: .4rem /* 30/75 */;
+  }
+}
+
+// 超值推荐
+.mm_recommend {
+  display: flex;
+  align-content: space-between;
+  align-items: center;
+  margin-top: .133333rem /* 10/75 */;
+  padding: 0 .266667rem /* 20/75 */;
+  height: .933333rem /* 70/75 */;
+  // line-height: .933333rem /* 70/75 */;
+  color: @bg_ff;
+  background-color: @bg_cl;
+  .rd {
+    flex: 1;
+  }
+  .arrow_right {
+    width: .533333rem /* 40/75 */;
+    height: .533333rem /* 40/75 */;
+    background: url(../images/more.png);
+    background-size: cover;
+  }
+}
+
+// 品牌排行
+.brand {
+  padding-top: .266667rem /* 20/75 */;
+  height: 1.866667rem /* 140/75 */;
+  background-color: #f1f1f1
+}

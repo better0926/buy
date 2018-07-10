@@ -1,0 +1,14 @@
+img {
+  width: 100%;
+}
+.sub_wrap .price {
+  margin-top: 0.266667rem /* 20/75 */;
+  font-size: 0.4rem /* 30/75 */;
+  line-height: 0.666667rem /* 50/75 */;
+}
+.sub_wrap .pro .pro_right .time {
+  justify-content: flex-start;
+}
+.sub_wrap .pro .pro_right .time .num {
+  margin-left: 22px;
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/moneydetail.css">
+  <script src="lib/flexible.js"></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="hd__log">
+      <a href="javascript:history.go(-1)">
+        <div class="arrowleft"></div>
+      </a>
+    </div>
+    <h1 class="title"> 国内折扣</h1>
+    <div class="hd_load">
+      <a href="javascript:;">
+        <img src="images/header_app.png" alt="">
+      </a>
+    </div>
+  </header>
+
+  <!-- main -->
+  <section class="mm_main">
+    <div class="container">
+      <div class="cu">
+        <!--  <div class="info">
+          <h4 class="info_tlt"> 移动端凑单品：海天 鲜味 生抽 1.28L</h4>
+                <div class="info_mesg">
+                  <span class="store">天猫</span>
+                  <span class="time">2012</span>
+                  <span class="author">满城的烟火</span>
+                </div>
+                <div class="info_content">
+                  <div class="pic">
+                    <img src="images/pic.jpg" alt="">
+                  </div>
+                  <div class="text">
+                    <p class="text_p">海天的金标生抽酱油，采用了非转基因大豆以及小麦发酵而成，而自然鲜的口感是有些鲜甜鲜甜的感觉，非常适合用来作为日常炒菜用的调味料，当然也能用作白切系列的蘸酱调料，相信吃过美味鲜的慢友们都了解的。</p>
+                    <p>采用了非转基因大豆以及小麦发酵而成，而自然鲜的口</p>
+                  </div>
+                  <div class="big_pic">
+                    <img src="images/pic.jpg" alt="">
+                  </div>
+                </div>
+        </div> -->
+        <!-- <div class="city">
+          <ul class="wrap">
+            <li class="clearfix">
+              <span class="cityname">北京</span>
+              <span class="have">有货</span>
+            </li>
+            <li class="clearfix">
+              <span class="cityname">北京</span>
+              <span class="have">有货</span>
+            </li>
+            <li class="clearfix">
+              <span class="cityname">北京</span>
+              <span class="have">有货</span>
+            </li>
+          </ul>
+        </div>
+        <a href="javascript:;" class="go_shop">前往购买</a>
+        <div class="ewm">
+          <img src="images/mmbweixin2.png" alt="">
+        </div> -->
+      </div>
+      <!-- 评论去 -->
+      <div class="review">
+        <!-- 评论区 -->
+
+
+        <!-- <div class="comment">
+          <div>发表评论</div>
+          <div class="textarea">
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <div class="send">
+              <a href="#">发送评论</a>
+            </div>
+          </div>
+        </div>
+        <div class="new_comment">
+          <div>最新评论</div>
+          <div class="user_info">
+            <div class="user">
+              <img src="images/timg.jpg" alt="">
+            </div>
+            <div class="username">
+              <div class="up">
+                <p class="name">小笨蛋蛋</p>
+                <p class="nowtime">2018</p>
+              </div>
+              <p class="desc">傻瓜中的小笨蛋蛋</p>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="foot_tlt">
+      <a href="#" class="login">登录</a>
+      <a href="#" class="register">注册</a>
+      <a href="#" class="go-top">
+        <img src="images/top.jpg" alt=""> 返回顶部
+      </a>
+    </div>
+    <div class="foot_bt ft_24">
+      <p class="foot_txt">
+        <a href="javascript:;" class="ft_cl">手机APP下载</a>
+        <a href="index.html">慢慢买手机版</a>
+        <a href="javascript:;"> -- 掌上比价平台</a>
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+
+  <!-- 准备模板 -->
+  <script type="text/html" id="showTpl">
+    {{each result v i }}
+    <div class="info">
+      <h4 class="info_tlt">{{ v.productName }}</h4>
+      <div class="info_mesg">
+        <span class="store">{{ v.productFrom }}</span>
+        <span class="time">{{ v.productTime }}</span>
+        <span class="author">{{ v.productTips }}</span>
+      </div>
+      <div class="info_content">
+        <div class="pic">
+          {{#v.productImgSm }}
+          <!-- <img src={{v.productImg2}}}> -->
+        </div>
+        <div class="text">
+          <p class="text_p">{{ v.productInfo }}</p>
+          <p>{{ v.productInfo1}}</p>
+        </div>
+        <div class="big_pic">
+          {{#v.productImgLg}}
+        </div>
+      </div>
+    </div>
+    <div class="city">
+      <!-- 城市列表 -->
+      {{#v.productCity}}
+    </div>
+    <a href="javascript:;" class="go_shop">前往购买</a>
+    <div class="ewm">
+      <img src="images/mmbweixin2.png" alt="">
+    </div>
+
+    <div class="review">
+      <!-- 评论区 -->
+      {{#v.productComment}}
+    </div>
+    {{/each}}
+  </script>
+
+  <!-- js引入 -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/moneydetail.js"></script>
+</body>
+
+</html>

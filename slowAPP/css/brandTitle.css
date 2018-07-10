@@ -1,0 +1,16 @@
+body {
+  background-color: #fff;
+}
+.hot {
+  margin: 0.266667rem /* 20/75 */ 0.133333rem /* 10/75 */;
+  height: 1.013333rem /* 76/75 */;
+  line-height: 1.013333rem /* 76/75 */;
+  text-indent: 0.373333rem /* 28/75 */;
+  border: 1px solid #d0d0d0;
+  background-color: #eeeeee;
+  font-size: 0.453333rem /* 34/75 */;
+  color: #7c410d;
+}
+.list {
+  border-bottom: 1px solid #cdcdcd;
+}

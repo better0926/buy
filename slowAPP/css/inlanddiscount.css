@@ -1,0 +1,39 @@
+.mm_wrap {
+  padding: 0.133333rem /* 10/75 */ 0;
+}
+.wrap {
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  flex-wrap: wrap;
+  background-color: #fff;
+}
+.wrap .pro {
+  padding: 0.2rem /* 15/75 */;
+  width: 50%;
+  height: 6.933333rem /* 520/75 */;
+  border-bottom: 1px solid #ccc;
+}
+.wrap .pro .img {
+  margin: 0 auto;
+  width: 4.266667rem /* 320/75 */;
+  height: 4.266667rem /* 320/75 */;
+}
+.wrap .pro .info {
+  margin-top: 0.133333rem /* 10/75 */;
+  padding-left: 0.133333rem /* 10/75 */;
+  font-size: 0.333333rem /* 25/75 */;
+}
+.wrap .pro .info .desc {
+  line-height: 0.506667rem /* 38/75 */;
+}
+.wrap .pro .info .price {
+  line-height: 0.666667rem /* 50/75 */;
+  color: #ff5b4c;
+}
+.wrap .pro .info .from {
+  color: #666;
+}
+.wrap .pro:nth-child(odd) {
+  border-right: 1px solid #ccc;
+}

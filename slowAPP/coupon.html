@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/coupon.css">
+  <script src="lib/flexible.js"></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header hd_red">
+    <div class="hd__log">
+      <a href="javascript:history.go(-1)">
+        <div class="arrowleft"></div>
+      </a>
+    </div>
+    <h1 class="title">优惠券</h1>
+    <div class="hd_load">
+      <a href="javascript:;">
+        <img src="images/header_app.png" alt="">
+      </a>
+    </div>
+  </header>
+
+  <!-- 优惠券-->
+  <section class="mm_coupon">
+    <ul class="coupon_list">
+      <!-- 模板渲染 -->
+      <script type="text/html" id="coupon">
+        {{each result v i}}
+        <li class="list">
+          <!-- <a href="couponproduct.html?couponid=0"> -->
+          <a href="{{v.couponLink}}?couponid={{v.couponId}}">
+            <div class="img">
+              <img src="{{v.couponImg}}" alt="">
+            </div>
+            <p class="title">{{v.couponTitle}}</p>
+          </a>
+        </li>
+        {{ /each}}
+      </script>
+    </ul>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="foot_tlt">
+      <a href="#" class="login">登录</a>
+      <a href="#" class="register">注册</a>
+      <a href="#" class="go-top">
+        <img src="images/top.jpg" alt=""> 返回顶部
+      </a>
+    </div>
+    <div class="foot_bt ft_24">
+      <p class="foot_txt">
+        <a href="javascript:;" class="ft_cl">手机APP下载</a>
+        <a href="index.html">慢慢买手机版</a>
+        <a href="javascript:;"> -- 掌上比价平台</a>
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+
+  <!-- js引入 -->
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/iscroll.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/coupon.js"></script>
+</body>
+
+</html>

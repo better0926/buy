@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/category.css">
+  <script src="lib/flexible.js"></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="hd__log">
+      <a href="index.html">
+        <img src="images/header_logo.png" alt="">
+      </a>
+    </div>
+    <h1 class="title"></h1>
+    <div class="hd_load">
+      <a href="javascript:;">
+        <img src="images/header_app.png" alt="">
+      </a>
+    </div>
+  </header>
+
+  <!-- main 主体  搜索框-->
+  <section class="search">
+    <div class="ipt">
+      <input type="search" placeholder="请输入你想要比价的商品">
+    </div>
+    <a href="javascript:;" class="search_btn">搜索</a>
+  </section>
+
+  <!-- categoty 二级菜单 -->
+  <section class="mm_category">
+    <ul class="ct_tlt">
+      <!-- template 模板渲染 -->
+      <!-- <li class="list" data-title-id="1"> 
+        <div class="one_list">
+          <p class="one_txt">大家电</p>
+        </div>
+        <ul class="sub_list clearfix">
+          <li class="sub_txt">
+            <a href="#">电视</a>
+          </li>
+          <li class="sub_txt">
+            <a href="#">电视</a>
+          </li>
+          <li class="sub_txt">
+            <a href="#">电视</a>
+          </li>
+          <li class="sub_txt">
+            <a href="#">电视</a>
+          </li>
+          <li class="sub_txt">
+            <a href="#">电视</a>
+          </li>
+        </ul>
+      </li> -->
+    </ul>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="foot_tlt">
+      <a href="#" class="login">登录</a>
+      <a href="#" class="register">注册</a>
+      <a href="#" class="go-top">
+        <img src="images/top.jpg" alt=""> 返回顶部
+      </a>
+    </div>
+    <div class="foot_bt ft_24">
+      <p class="foot_txt">
+        <a href="javascript:;" class="ft_cl">手机APP下载</a>
+        <a href="index.html">慢慢买手机版</a>
+        <a href="javascript:;"> -- 掌上比价平台</a>
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+
+  <script type="text/html" id="cateTpl">
+    {{ each result v i }}
+    <li class="list" data-title-id="{{ v.titleId }}">
+      <div class="one_list">
+        <p class="one_txt">{{ v.title }}</p>
+      </div>
+      <ul class="sub_list clearfix">
+          
+      </ul>
+    </li>
+    {{ /each }}
+  </script>
+
+  <script type="text/html" id="subTpl">
+
+    {{ each result v i }}
+    <li class="sub_txt ft_26" data-categoryId="{{ v.categoryId }}">
+      <a href="productlist.html?categoryid={{ v.categoryId }}&category={{ v.category}}&pageid=1">{{ v.category }}</a>
+    </li>
+    {{ /each }}
+
+  </script>
+
+  <!-- js引入 -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/category.js"></script>
+</body>
+
+</html>

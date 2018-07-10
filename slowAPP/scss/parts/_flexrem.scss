@@ -1,0 +1,8 @@
+@import 'base';
+body {
+  font-family: $PF;
+}
+
+@function px2rem ($px) {
+  @return $px / 75 * 1rem;
+}

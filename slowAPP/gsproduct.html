@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/gsproduct.css">
+  <script src="lib/flexible.js"></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="header">
+    <div class="hd__log">
+      <a href="javascript:history.go(-1)">
+        <div class="arrowleft"></div>
+      </a>
+    </div>
+    <h1 class="title">凑单品</h1>
+    <div class="hd_load">
+      <a href="javascript:;">
+        <img src="images/header_app.png" alt="">
+      </a>
+    </div>
+  </header>
+
+  <!-- 区域导航 -->
+  <section class="mm_godds">
+    <div class="goods_list">
+      <div class="goods_hd">
+        <div class="filter">
+          <ul class="nav">
+            <li class="list">
+              <a href="#">
+                <span class="name1">京东</span>
+                <div class="triangle_border_down">
+                  <span></span>
+                </div>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#">
+                <span class="name2">华北</span>
+                <div class="triangle_border_down">
+                  <span></span>
+                </div>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#">全部价格
+                <div class="triangle_border_down alone">
+                  <span></span>
+                </div>
+              </a>
+            </li>
+            <li class="list gds_search">
+              <i></i>
+            </li>
+          </ul>
+        </div>
+        <!-- 下拉 -->
+        <!-- 店铺 -->
+        <div class="pop popsort hide">
+          <ul class="pop_list">
+            <script type="text/html" id="sortTpl">
+              {{each result v i }}
+              <li data-shopid="{{v.shopId}}" class="one">
+                <a href="#">{{v.shopName}}</a>
+              </li>
+              {{ /each }}
+            </script>
+          </ul>
+        </div>
+        <!-- 地区 -->
+        <div class="pop popadd hide">
+          <ul class="pop_list">
+            <script type="text/html" id="addTpl">
+              {{each result v i}}
+              <li data-areaId="{{v.areaId}}" class="two">
+                <a href="#">{{v.areaName}}</a>
+              </li>
+              {{ /each }}
+            </script>
+          </ul>
+        </div>
+        <!-- 全部 -->
+        <div class="pop popall hide">
+          <ul class="pop_list">
+            <li>
+              <a href="#">全部价格</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="goods_pro">
+        <!-- 商品列表 -->
+        <ul class="wrap">
+          <!-- template 渲染 商品-->
+          <script type="text/html" id="gsTpl">
+            {{each result v i }}
+            <li class="pro" data-shopid="{{v.shopId}}" data-areaid="{{v.areaId}}" data-productId="{{v.productId}}">
+              <a href="http://item.m.jd.com/ware/view.action?wareId=1274360">
+                <div class="img">
+                  <img src="{{v.productImg}}" alt="">
+                </div>
+                <div class="info">
+                  <p class="desc txt-over ft_24">{{v.productName}}</p>
+                  <div id="go">
+                    <p class="ft_30 cl_red">{{v.productPrice}}</p>
+                    <div class="bt ft_24">去凑单</div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            {{ /each }}
+          </script>
+          <!-- <li class="pro">
+            <a href="#">
+              <div class="img">
+                <img src="images/product.jpg" alt="">
+              </div>
+              <div class="info">
+                <p class="desc txt-over ft_24">西域美农新疆特产五星和田红枣250g*2</p>
+                <div id="go">
+                  <p class="ft_30 cl_red">999.9</p>
+                  <div class="bt ft_24">去凑单</div>
+                </div>
+              </div>
+            </a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="foot_tlt">
+      <a href="#" class="login">登录</a>
+      <a href="#" class="register">注册</a>
+      <a href="#" class="go-top">
+        <img src="images/top.jpg" alt=""> 返回顶部
+      </a>
+    </div>
+    <div class="foot_bt ft_24">
+      <p class="foot_txt">
+        <a href="javascript:;" class="ft_cl">手机APP下载</a>
+        <a href="index.html">慢慢买手机版</a>
+        <a href="javascript:;"> -- 掌上比价平台</a>
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+
+  <!-- js引入 -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common/Tools.js"></script>
+  <script src="js/common/Route.js"></script>
+  <script src="js/gsproduct.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+.mm_product {
+  background-color: #f5f5f5;
+}
+.mm_nav {
+  margin-bottom: .133333rem /* 10/75 */;
+  height: 1.066667rem /* 80/75 */;
+  line-height: .96rem /* 72/75 */;
+  background-color: #fff;
+  overflow: hidden;
+  .wrap_nav {
+    // width: 200%;
+    // display: flex;
+    // justify-content: flex-start;
+    // align-items: center;
+    height: 100%;
+  }
+  .nav {
+    float: left;
+    padding: .026667rem /* 2/75 */ 0;
+    border-bottom:  2px solid #fc353a;
+    border-color: transparent;
+    &.now a{
+      border-bottom:  2px solid #fc353a;
+    }
+    a {
+      margin: 0 .266667rem /* 20/75 */;
+      font-size: .32rem /* 24/75 */;
+    }
+  }
+}
+
+//领券商品列表
+.mm_product .pro {
+  margin-bottom: .133333rem /* 10/75 */;
+  height: 3.866667rem /* 290/75 */;
+  background-color: #fff;
+}
+.pro_right {
+  padding-left: .133333rem /* 10/75 */;
+  padding-top: .2rem /* 15/75 */;
+  font-size: .346667rem /* 26/75 */;
+  .timer {
+    padding-top: .266667rem /* 20/75 */;
+    color: red;
+    font-size: .4rem /* 30/75 */;
+    span {
+      font-size: .453333rem /* 34/75 */;
+      em{font-style: normal;padding: 0 .133333rem /* 10/75 */; font-size: .32rem /* 24/75 */;}
+    }
+    del {
+      margin-left: .346667rem /* 26/75 */;
+      color: #ccc;
+    }
+  }
+  //进度条
+  .bar  {
+    display: flex;
+    height: .666667rem /* 50/75 */;
+    align-items: center;
+    color: #fc353a;
+    b {
+      font-weight: normal;
+      font-size: .32rem /* 24/75 */;
+    }
+    i {
+      position: relative;
+      margin-right: .266667rem /* 20/75 */;
+      width: 2.186667rem /* 164/75 */;
+      height: .373333rem /* 28/75 */;
+      border: 1px solid #fc353a;
+      background-color: #ffb7b7;
+      border-radius: .186667rem /* 14/75 */;
+      overflow: hidden;
+      em {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        background-color: #fc353a;
+        border-radius: .186667rem /* 14/75 */;
+        color:#fff;
+      }
+      span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: .533333rem /* 40/75 */;
+        font-size: .24rem /* 18/75 */;
+      }
+    }
+  }
+  .get{
+    display: flex;
+    justify-content: space-between;
+    height: .693333rem /* 52/75 */;
+    line-height: .693333rem /* 52/75 */;
+    a {
+      height: 100%;
+      padding: 0 .133333rem /* 10/75 */;
+      text-align: center;
+      font-size: .32rem /* 24/75 */;
+    }
+    :first-child {
+      border: 1px dotted #fc353a;
+      color: #fc353a;
+    }
+    :last-child {
+      border: 1px solid #ff4140;
+      background-color: #fc353a;
+      color: #fff;
+      border-radius: .133333rem /* 10/75 */;
+    }
+  }
+}
